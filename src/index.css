@@ -46,8 +46,8 @@ nav {
 
 .nav__brand h1 {
   color: var(--clr-blue);
-  font-size: 2.5em;
-  font-weight: 800;
+  font-size: 2.0 em;
+  font-weight: 600;
 }
 
 .nav__links {

@@ -26,10 +26,12 @@ function App() {
   const loadBlockchainData = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     setProvider(provider)
-    const network = await provider.getNetwork()
+    
+    const network = await provider.getNetwork()    
 
     const realEstate = new ethers.Contract(config[network.chainId].realEstate.address, RealEstate, provider)
     const totalSupply = await realEstate.totalSupply()
+
     const homes = []
 
     for (var i = 1; i <= totalSupply; i++) {
